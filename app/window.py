@@ -2,7 +2,16 @@ import pygame
 import pygame._sdl2 as sdl2
 from pygame.locals import QUIT
 import sys
+import tkinter as tk
 
+
+root = tk.Tk()
+
+global screen_width
+global screen_height
+
+screen_width = root.winfo_screenwidth()
+screen_height = root.winfo_screenheight()
 # window class
 class Window:
     def __init__(self, game):
@@ -11,8 +20,8 @@ class Window:
         # win settings
         self.title = "Isometric Bob Game"
         self.icon = pygame.image.load("src/img/icon.png")
-        self.w = 1920
-        self.h = 1080
+        self.w = screen_width
+        self.h = screen_height
 
         # init window
         self.normal_init()
