@@ -3,11 +3,18 @@ import sys
 import os 
 from pygame.locals import KEYDOWN, K_ESCAPE, K_RETURN, K_BACKSPACE
 import application
+import tkinter as tk
+
 
 pygame.init()
 #os.chdir("/home/adeleris/Desktop")
 
-original_largeur, original_hauteur = 1920, 1080
+root = tk.Tk()
+
+screen_width = root.winfo_screenwidth()
+screen_height = root.winfo_screenheight()
+
+original_largeur, original_hauteur = screen_width,screen_height 
 largeur, hauteur = original_largeur, original_hauteur
 
 window_surface = pygame.display.set_mode((largeur, hauteur))
