@@ -2,7 +2,7 @@ import pygame
 import sys
 import os 
 from pygame.locals import KEYDOWN, K_ESCAPE, K_RETURN, K_BACKSPACE
-import main
+import application
 
 pygame.init()
 #os.chdir("/home/adeleris/Desktop")
@@ -452,7 +452,7 @@ if __name__ == "__main__":
             
             if action == "start_game":
                 game_started = True
-                main.main()
+                application.main()
             elif action == "options_menu":
                 print(action)
                 x=0
